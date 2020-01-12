@@ -63,10 +63,8 @@
                                aria-haspopup="true" aria-expanded="false">Games</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item active"><a class="nav-link" href="{{route('aboutus')}}">Fortnite</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Apex Legends</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">League Of Legends </a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Dota</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">CS-GO</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('leagueoflegends')}}">League Of Legends </a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('CS')}}">CS-GO</a></li>
                             </ul>
                         </li>
                         <li class="nav-item submenu dropdown">
@@ -101,8 +99,12 @@
                 <div class="image">
                     <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
-                <div>
-                    <a href="#" class="d-block">User</a>
+                <div style = "margin-left: 10px">
+                    @guest
+                        <a href="#" class="d-block">User</a>
+                    @else
+                        <a href="#" class="d-block">{{Auth::user()->name}}</a>
+                    @endguest
                 </div>
             </div>
 
@@ -119,7 +121,7 @@
                             <p>
                                 Select Game
                                 <i class="fas fa-angle-left right"></i>
-                                <span class="badge badge-info right">5</span>
+                                <span class="badge badge-info right">3</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
@@ -141,18 +143,7 @@
                                     <p>CS:GO</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Apex Legends</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Dota</p>
-                                </a>
-                            </li>
+
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
@@ -173,24 +164,7 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
-                            <p>
-                                Coaching
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-table"></i>
-                            <p>
-                                Meta
-                            </p>
-                        </a>
 
-                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -226,7 +200,7 @@
             <div class="row m0">
                 <div class="col-md-3 features_item">
                     <img src="image/courses_building.jpg" alt="savage" width="150px" height="150px"
-                         style="text-align:center">
+                         style="text-align:center" class="margin">
                     <h3 style="text-align:center">Build Courses</h3>
                     <p>Learn How To Build in Fortnite</p> <br>
                     <a href="#" class="btn_hover view_btn">Courses</a>

@@ -33,8 +33,7 @@
                 </div>
                 <div class="col-sm-6 col-7">
                     <div class="top_btn d-flex justify-content-end">
-                        <a href="#">My Account</a>
-                        <a href="#">Donate Now</a>
+
                     </div>
                 </div>
             </div>
@@ -57,10 +56,8 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="nav-link" href="{{route('fortnite')}}">Fortnite</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Apex Legends</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">League Of Legends </a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Dota</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">CS-GO</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('leagueoflegends')}}">League Of Legends </a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('CS')}}">CS-GO</a></li>
                         </ul>
                     </li>
                     <li class="nav-item active"><a class="nav-link" href="{{route('aboutus')}}">About Us</a></li>
